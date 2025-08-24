@@ -42,13 +42,13 @@ flowchart LR
 
 ## Test Commands
 
-# POST (create)
+### POST (create)
 curl -i -X POST \
   -H "Origin: https://d2c28v2xk2s98n.cloudfront.net" \
   -H "Content-Type: application/json" \
   -d '{"repo_url":"https://github.com/owner/repo","title":"Demo"}' \
   "https://o4hzlr5rqd.execute-api.us-east-2.amazonaws.com/prod/projects"
 
-# GET (list)
+### GET (list)
 curl -i -H "Origin: https://d2c28v2xk2s98n.cloudfront.net" \
   "https://o4hzlr5rqd.execute-api.us-east-2.amazonaws.com/prod/projects?limit=12"
