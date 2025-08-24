@@ -28,17 +28,8 @@ Frontend runs on **S3 → CloudFront (OAC, HTTPS)**; API is **API Gateway (REST)
 
 ---
 
-## Architecture
-
-flowchart LR
-  user["Browser"] -->|HTTPS| cf["CloudFront (ACM, OAC)"]
-  cf -->|/index.html, /app.js, /styles.css| s3["S3 (private)"]
-  s3 -.->|OAC signed| cf
-  user -->|/projects (GET/POST)| cf
-  cf --> apig["API Gateway (REST) /prod"]
-  apig --> lambda["Lambda (Python)"]
-  lambda --> ddb["DynamoDB: Projects"]
-
+## Flow
+![Flow_Diagram](./diagram/flow_diagram.png)
 
 ## Test Commands
 
@@ -52,3 +43,7 @@ curl -i -X POST \
 ### GET (list)
 curl -i -H "Origin: https://d2c28v2xk2s98n.cloudfront.net" \
   "https://o4hzlr5rqd.execute-api.us-east-2.amazonaws.com/prod/projects?limit=12"
+
+
+## Ouput
+![UI Output](./output/Picture1.png)
