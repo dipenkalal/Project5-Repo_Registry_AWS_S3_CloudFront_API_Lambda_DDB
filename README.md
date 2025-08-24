@@ -46,4 +46,4 @@ curl -i -H "Origin: https://d2c28v2xk2s98n.cloudfront.net" \
 
 
 ## Ouput
-![UI Output](./outputs/Picture1.png)
+![UI Output](./outputs/Picture2.png)
