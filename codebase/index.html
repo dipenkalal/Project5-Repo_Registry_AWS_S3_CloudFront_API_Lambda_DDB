@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submit GitHub Project</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Community Projects</h1>
+
+    <section class="card">
+      <h2>Submit a project</h2>
+      <form id="submitForm">
+        <input id="repo_url" placeholder="https://github.com/owner/repo" required />
+        <input id="title" placeholder="Title (optional)" />
+        <input id="submitter" placeholder="Your name (optional)" />
+        <textarea id="description" placeholder="Short description (optional)"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="submitMsg"></p>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>All submissions</h2>
+        <button id="refreshBtn">Refresh</button>
+      </div>
+      <div id="list"></div>
+      <div class="row">
+        <button id="loadMoreBtn" style="display:none">Load more</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Important: defer ensures DOM is ready before app.js runs -->
+  <script src="/app.js" defer></script>
+</body>
+</html>
