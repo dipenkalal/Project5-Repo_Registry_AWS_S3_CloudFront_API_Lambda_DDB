@@ -28,20 +28,8 @@ Frontend runs on **S3 → CloudFront (OAC, HTTPS)**; API is **API Gateway (REST)
 
 ---
 
-## Repo structure
-
-├─ index.html
-├─ app.js
-├─ styles.css
-└─ lambda/
-└─ lambda_function.py
-
-
----
-
 ## Architecture
 
-```mermaid
 flowchart LR
   user["Browser"] -->|HTTPS| cf["CloudFront (ACM, OAC)"]
   cf -->|/index.html, /app.js, /styles.css| s3["S3 (private)"]
