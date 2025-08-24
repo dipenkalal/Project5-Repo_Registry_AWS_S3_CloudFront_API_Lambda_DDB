@@ -1,4 +1,4 @@
-# Community Projects — AWS Serverless GitHub Submissions
+# Repo Registry — AWS Serverless GitHub Submissions
 
 A tiny serverless app where anyone can **submit a GitHub repo** and **browse all submissions**.  
 Frontend runs on **S3 → CloudFront (OAC, HTTPS)**; API is **API Gateway (REST) → Lambda (Python) → DynamoDB**.
